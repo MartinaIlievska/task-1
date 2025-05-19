@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1>Site kursevi:</h1>
+
+    <% if (kursevi.length === 0) { %>
+    <p>Nema kursevi</p>
+    <% } else { %> <% kursevi.forEach(kurs => { %>
+    <div>
+      <h2><%= kurs.ime %></h2>
+      <p><%= kurs.adresa %></p>
+      <p><%= kurs.oblast %></p>
+    </div>
+    <%}); %> <% } %>
+  </body>
+</html>
