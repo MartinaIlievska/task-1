@@ -14,10 +14,10 @@ app.use(express.json());
 
 database.dataBase();
 
-app.post('/api/v1/signup', auth.signup);
-app.post('/api/v1/login', auth.login);
+app.post('/api/v1/signup', auth.signUp);
+app.post('/api/v1/login', auth.logIn);
 
-app.get('/api/v1/akademija', auth.protect, academijaC.getAllAkademija);
+app.get('/api/v1/akademija', academijaC.getAllAkademija);
 app.get('/api/v1/akademija/:id',  auth.protect, academijaC.getAkademijaById);
 app.post('/api/v1/akademija',  auth.protect, academijaC.createAkademija);
 app.patch('/api/v1/akademija/:id',  auth.protect, academijaC.updateAkademija);
