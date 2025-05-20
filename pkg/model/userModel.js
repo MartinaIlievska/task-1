@@ -15,8 +15,7 @@ const userSchema = new mongoose.Schema({
     minlenght: 8,
     required: [true, "Strong password is required"],
   },
-  passwordResetToken: String,
-  passwordResetExpires: Date,
+  
   name: {
     type: String,
     required: [true, "Write your name"],
